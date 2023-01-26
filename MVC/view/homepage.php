@@ -34,7 +34,7 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -95,7 +95,7 @@
     </div>
     <!-- about section  -->
 
-    <section id="about" class="about section-padding">
+    <section class="about section-padding" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-12">
@@ -105,8 +105,8 @@
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text">
-                        <h2 class="text-dark mt-2">We present the real <br> morrocan cultur</h2>
-                        <h5 class="text-secondary">CentrallHouse present the morrocan hospitality and how Moroccan treat peaple
+                        <h2 class="text-dark mt-2">We present the real <br> moroccan culture</h2>
+                        <h5 class="text-secondary mb-2">CentrallHouse present the morrocan hospitality and how Moroccan treat peaple
                             also we try to put a big effort in our service, Morocco is a tolerant, yet traditional culture with strong values and there are one or two
                             etiquette rules to follow to ensure a smooth and respectful trip. As a Muslim country, clothing should be modest as many people are offended
                             by clothes that do not cover legs and shoulders, especially in rural areas.
@@ -125,8 +125,8 @@
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text">
-                        <h2 class="text-dark mt-2">We present the <br> morrocan cuisin </h2>
-                        <h5 class="text-secondary">Moroccan cuisine is known for its rich flavors and diverse ingredients. It is heavily influenced by Berber, Moorish, and Mediterranean cultures. Some popular dishes include tagine,
+                        <h2 class="text-dark mt-2">We present the <br> morrocan cuisine</h2>
+                        <h5 class="text-secondary mb-2">Moroccan cuisine is known for its rich flavors and diverse ingredients. It is heavily influenced by Berber, Moorish, and Mediterranean cultures. Some popular dishes include tagine,
                             a slow-cooked stew typically made with meat, vegetables, and spices such as cumin and ginger;
                             couscous, a type of pasta made from semolina flour that is often served with vegetables and meat;
                             and bisteeya, a savory pastry filled with meat and nuts. Other traditional ingredients include olives, preserved lemons, and a variety of spices such as saffron, cinnamon, and turmeric
@@ -145,7 +145,7 @@
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text">
                         <h2 class="text-dark mt-2">We present the <br> morrocan hospitality</h2>
-                        <h5 class="text-secondary">Moroccan hospitality is renowned for being warm, generous, and welcoming. Visitors to Morocco are often greeted with traditional tea and pastries upon arrival,
+                        <h5 class="text-secondary mb-2">Moroccan hospitality is renowned for being warm, generous, and welcoming. Visitors to Morocco are often greeted with traditional tea and pastries upon arrival,
                             and hosts often go out of their way to make guests feel at home.
                             Hospitality is deeply ingrained in Moroccan culture, and it is considered a point of pride to make guests feel comfortable and well-cared for.
                             Additionally, Moroccans often invite guests to share meals with them, and it is considered rude to decline such an invitation. Overall, Moroccan hospitality is a reflection of
