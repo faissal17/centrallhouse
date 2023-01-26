@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <title>CentrallHouse</title>
-    <link rel="shortcut icon" href="../../public/images/Hotel.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../public/images/icon.png" type="image/x-icon">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><span class="text-warning">Central</span><span class="text-danger fw-bold">House</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,10 +40,10 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold d-flex align-item-end" href="#">Login</a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold d-flex align-item-end" href="#">Signup</a>
+                        <a class="nav-link" href="#">Signup</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@
         <div class="carousel-inner mt-2">
             <div class="carousel-item active">
                 <img src="../../public/images/menara-gardens-5924722.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h5 class="fw-bold">About Marrakech</h5>
                     <p>Marrakech was founded in 1062 by Yusuf ibn Tashfin, leader of the Moroccan Almoravid empire. He is also considered one of the most prominent leaders of the country,
                         promoting an Islamic system in the whole country, Muslim Spain and the Maghreb.
@@ -67,7 +67,7 @@
             </div>
             <div class="carousel-item mt-2">
                 <img src="../../public/images/morocco-2746495.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h5>Touriste in marrakech</h5>
                     <p>30% of the tourists were one of the 3.8 million Moroccans living abroad. Marrakech itself had over 2 million visitors in 2017. In 2019, more than 13 million tourists visited Morocco.
                         In 2020, Morocco witnessed an all time low with no more than 4 million tourists,
@@ -76,7 +76,7 @@
             </div>
             <div class="carousel-item mt-2">
                 <img src="../../public/images/marrakech-735888.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h5>why marrakech</h5>
                     <p>Marrakech is also known as the city of luxury, thanks to its famous palaces, 5-star restaurants, luxury spas and hammams and charming riads (traditional houses) in the medina. Amongst others,
                         there is the Mamounia and its enchanting gardens, the luxurious Royal Mansour
@@ -93,6 +93,70 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- about section  -->
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-image">
+                        <img src="../../public/images/pisicin.jpg" class="img-fluid" style="height: 70vh">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2 class="text-dark mt-2">We present the real <br> morrocan cultur</h2>
+                        <h5 class="text-secondary">CentrallHouse present the morrocan hospitality and how Moroccan treat peaple
+                            also we try to put a big effort in our service, Morocco is a tolerant, yet traditional culture with strong values and there are one or two
+                            etiquette rules to follow to ensure a smooth and respectful trip. As a Muslim country, clothing should be modest as many people are offended
+                            by clothes that do not cover legs and shoulders, especially in rural areas.
+                            he is one of the best this how CentrallHouse present morocco
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-image">
+                        <img src="../../public/images/foods.jpg" class="img-fluid" style="height: 70vh">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2 class="text-dark mt-2">We present the <br> morrocan cuisin </h2>
+                        <h5 class="text-secondary">Moroccan cuisine is known for its rich flavors and diverse ingredients. It is heavily influenced by Berber, Moorish, and Mediterranean cultures. Some popular dishes include tagine,
+                            a slow-cooked stew typically made with meat, vegetables, and spices such as cumin and ginger;
+                            couscous, a type of pasta made from semolina flour that is often served with vegetables and meat;
+                            and bisteeya, a savory pastry filled with meat and nuts. Other traditional ingredients include olives, preserved lemons, and a variety of spices such as saffron, cinnamon, and turmeric
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-image">
+                        <img src="../../public/images/hos.jpg" class="img-fluid" style="height: 70vh">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2 class="text-dark mt-2">We present the <br> morrocan hospitality</h2>
+                        <h5 class="text-secondary">Moroccan hospitality is renowned for being warm, generous, and welcoming. Visitors to Morocco are often greeted with traditional tea and pastries upon arrival,
+                            and hosts often go out of their way to make guests feel at home.
+                            Hospitality is deeply ingrained in Moroccan culture, and it is considered a point of pride to make guests feel comfortable and well-cared for.
+                            Additionally, Moroccans often invite guests to share meals with them, and it is considered rude to decline such an invitation. Overall, Moroccan hospitality is a reflection of
+                            the country's strong sense of community and tradition.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
