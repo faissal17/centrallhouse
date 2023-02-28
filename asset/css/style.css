@@ -77,19 +77,22 @@ body {
     height: 100vh;
 }
 
-.img-fluid {
-    box-shadow: 12px 12px 20px;
+.services .card-body i {
+    font-size: 50px;
 }
 
 
 /*responsive only*/
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 767px) and (max-width: 991px) {
     .carousel-caption {
         bottom: 370px;
     }
     .carousel-caption p {
         width: 100%;
+    }
+    .card {
+        margin-bottom: 30px;
     }
 }
 

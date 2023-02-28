@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../asset/css/style.css">
     <!-- ================== END CSS Bootstrap ================== -->
 </head>
 
@@ -37,7 +37,7 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#service">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text">
-                        <h2 class="text-dark mt-2">We present the real <br> moroccan culture</h2>
+                        <h2 class="text-dark mt-2">We present the real <br> morrocan culture</h2>
                         <h5 class="text-secondary mb-2">CentrallHouse present the morrocan hospitality and how Moroccan treat peaple
                             also we try to put a big effort in our service, Morocco is a tolerant, yet traditional culture with strong values and there are one or two
                             etiquette rules to follow to ensure a smooth and respectful trip. As a Muslim country, clothing should be modest as many people are offended
@@ -157,8 +157,120 @@
         </div>
     </section>
 
-</body>
+    <!-- service section -->
 
+    <section id="service" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Service</h2>
+                        <p>high quality in service and give good experince to client</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="fa-solid fa-bell-concierge"></i>
+                            <h3 class="card-title">High Quality</h3>
+                            <p class="card-body">Our service include factors such as prompt and efficient service, knowledgeable and friendly staff, attention to detail, and a willingness to go above and beyond
+                                to meet the needs of the customer. A business that provides high quality service is typically one that prioritizes customer satisfaction and goes the extra mile
+                                to ensure that every customer has a positive experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="fa-solid fa-bed"></i>
+                            <h3 class="card-title">Relaxing</h3>
+                            <p class="card-body">the overall atmosphere and energy of the space. The lighting should be soft and warm, creating a peaceful ambiance. The temperature should be comfortable,
+                                not too hot or too cold. The environment should be natural and serene, with elements like trees, water, or open spaces. The sounds should be soothing and minimal, with no
+                                loud disruptions or noise. The energy level should be relaxed.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="fa-solid fa-bus"></i>
+                            <h3 class="card-title">Tour in the city</h3>
+                            <p class="card-body">Giving tours to tourists can be a fun and rewarding experience. As a tour guide, you will have the opportunity to share your knowledge and passion for a
+                                specific location or topic with visitors from around the world. It requires excellent communication and organizational skills, as well as the ability to think on your feet
+                                and adapt to different groups. It's also important to be able to be good</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">centrallhouse</h5>
+                    <p>the Grand CentrallHouse is a luxurious and elegant accommodation option for discerning travelers. Upon entering the lobby, guests are greeted with soaring ceilings,
+                        plush carpets, and elegant decor. The guest rooms are equally impressive, featuring high-end furnishings,
+                        premium bedding, and modern amenities such as flat-screen TVs and high-speed Wi-Fi.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Social media</h5>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-instagram"></i> instagrame</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none">Reserve Tour</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none">Reserve Room</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none">Reserve Meal</a>
+                    </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-location-dot"></i> Adresse : Amssafah 32، 40000</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-envelope"></i> Centrall@gmail.com</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-phone"></i> +212647486952</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-fax"></i> +012638254638</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+<script src="../../asset/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>
