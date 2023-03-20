@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="./css/app.css">
     <!-- ================== END CSS Bootstrap ================== -->
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
@@ -40,7 +39,7 @@
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('register')}}">Signup</a>
+                        <a class="nav-link" href="{{ route('register')}}">Signup</a>
                     </li>
                 </ul>
             </div>
