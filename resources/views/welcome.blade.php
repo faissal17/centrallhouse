@@ -232,7 +232,7 @@
                 </div>
 
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">HelpFul links</h5>
                     <p>
                         <a href="#" class="text-light text-decoration-none">Your Account</a>
                     </p>
