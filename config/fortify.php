@@ -69,7 +69,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify which prefix Fortify will assign to all the routes
-    | that it registers with the application. If necessary, you may change
+    | that it registers with the application. If necessary, you may chang
     | subdomain under which all of the Fortify routes will be available.
     |
     */
