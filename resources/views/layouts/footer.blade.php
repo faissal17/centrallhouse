@@ -4,8 +4,7 @@
         <div class="row text-center text-md-left">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">centrallhouse</h5>
-                <p>the Grand CentrallHouse is a luxurious and elegant accommodation option for discerning travelers. Upon entering the lobby, guests are greeted with soaring ceilings,
-                    plush carpets, and elegant decor. The guest rooms are equally impressive, featuring high-end furnishings,
+                <p>the Grand CentrallHouse is a luxurious and elegant accommodation option for discerning travelers featuring high-end furnishings,
                     premium bedding, and modern amenities such as flat-screen TVs and high-speed Wi-Fi.</p>
             </div>
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">

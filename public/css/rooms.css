@@ -1,0 +1,77 @@
+body {
+    background: #fff;
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #6c757d;
+    position: relative;
+}
+
+#rooms {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.site-hero.inner:before {
+    height: 60vh;
+    min-height: 700px;
+}
+
+.site-hero-inner {
+    height: 100vh;
+    min-height: 700px;
+}
+
+.site-hero-inner .heading {
+    font-size: 80px;
+    font-family: "Playfair Display", times, serif;
+    color: #fff;
+    line-height: 1;
+    font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+    .site-hero-inner .heading {
+        font-size: 40px;
+    }
+}
+
+.site-hero-inner .sub-heading {
+    font-size: 30px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+    .site-hero-inner .sub-heading {
+        font-size: 18px;
+    }
+}
+
+.section {
+    padding: 5em 0;
+}
+
+@media (max-width: 991.98px) {
+    .section {
+        padding: 3em 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .lead {
+        font-size: 16px;
+    }
+}
+
+.username {
+    color: crimson;
+}
+
+#check {
+    font-weight: bold;
+    color: black;
+}
