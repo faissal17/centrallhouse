@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Room Crud Routes
+
+Route::resource('room',RoomController::class);
+
+// end Room Crud Routes
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// routes to direct me to diffrent pages
+
+Route::get('createroom', function () {
+    return view('roomscrud.createroom');
+
+});
+
+
+
+
+
+
+// end of routes to direct me to diffrent pages
+
+
+
+// routes in the navbar
+
 Route::get('/booking', function () {
     return view('booking');
-});
+})->name('booking');
+Route::get('/tables', function () {
+    return view('tables');
+})->name('tables');
+
+// end of routes in the navbar
+
 
 Route::middleware([
     'auth:sanctum',

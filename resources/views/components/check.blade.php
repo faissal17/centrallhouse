@@ -5,7 +5,7 @@
 
 <div class="container availability-form mt-8" style="width: 95%">
     <div class="row">
-        <div class="col-lg-12 bg-white shadow p-4 rounded me-4">
+        <div class="col-lg-12 bg-white p-4 me-4 doo">
             <h5 class="col-lg-3 text-uppercase" id="check">Check Booking Availability</h5>
             <form action="" method="GET">
                 <div class="row align-items-end">

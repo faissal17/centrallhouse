@@ -4,12 +4,13 @@
         <link rel="stylesheet" href="./css/rooms.css">
     </head>
 
+
     <section class="site-hero inner" id="rooms" style="background-image:url('./images/Morocco.jpg')">
         <div class="container">
             <div class="row site-hero-inner justify-content-center align-items-center">
                 <div class="col-md-10 text-center" data-aos="fade">
                     <p class="heading mb-3">Welcom back <span class="username">{{ auth()->user()->name }}</span></p>
-                    <button type="button" class="btn btn-outline-warning">Add Room</button>
+                   <a href="{{asset('createroom')}}"><button type="button" class="btn btn-outline-warning">Add Room</button></a>
                 </div>
             </div>
         </div>
@@ -17,7 +18,7 @@
     <!-- END section -->
 
     <!--start of checking avilibility -->
-@include('layouts.check')
+    <x-check/>
     <!--end of checking avilibility -->
 
     <div class="container-xxl py-5">
@@ -36,11 +37,12 @@
                             <div class="d-flex mb-3">
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                <small><i class="fa fa-hotel text-primary me-2"></i>3 Rooms</small>
                             </div>
                             <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             <div class="d-flex justify-content-between">
-                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="/booking">View Detail</a>
+                                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('booking')}}">View Detail</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Edit Room</a>
                             </div>
                         </div>
                     </div>
@@ -58,11 +60,12 @@
                             <div class="d-flex mb-3">
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                <small><i class="fa fa-hotel text-primary me-2"></i>3 Rooms</small>
                             </div>
                             <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Edit Room</a>
                             </div>
                         </div>
                     </div>
@@ -80,11 +83,12 @@
                             <div class="d-flex mb-3">
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                <small><i class="fa fa-hotel text-primary me-2"></i>3 Rooms</small>
                             </div>
                             <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Edit Room</a>
                             </div>
                         </div>
                     </div>
@@ -92,5 +96,6 @@
             </div>
         </div>
     </div>
-    @extends('layouts.footer')
-    </x-app-layout>
+    <x-footer/>
+
+</x-app-layout>

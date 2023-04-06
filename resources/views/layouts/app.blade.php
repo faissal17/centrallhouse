@@ -23,10 +23,9 @@
      <body class="font-sans antialiased">
          <x-banner />
 
-         <div class="bg-gray-100">
+         <x-navbar />
+         <div style="padding-top: 4rem">
              {{-- @livewire('navigation-menu') --}}
-
-  <x-navbar />
              <!-- Page Content -->
              <main>
                  {{ $slot }}
