@@ -25,13 +25,15 @@
         <div class="container">
             <div class="row g-4">
 
-                @foreach ($rooms as $room)
+            @foreach ($rooms as $room)
 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="cover/{{$room->cover}}" alt="" style="width: 18rem;">
+                            <div class="Image">
+                            <img src="cover/{{$room->cover}}" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-danger text-white rounded py-1 px-3 ms-4">${{$room->price}}/Night</small>
+                            </div>
                         </div>
                         <div class="p-4 mt-2">
                             <div class="d-flex justify-content-between mb-3">
@@ -45,12 +47,14 @@
                             <p class="text-body mb-3">{{$room->description}}</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{route('booking')}}">View Detail</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Edit Room</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="/editroom/{{$room->id}}">Edit Room</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
+
+            @endforeach
+
             </div>
         </div>
     </div>

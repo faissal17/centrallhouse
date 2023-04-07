@@ -74,7 +74,41 @@ class RoomController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $rooms=room::findOrFail($id);
+        return view('roomscrud.editroom',compact('rooms'));
+        if($request->hasFile("cover")){
+            if (File::exists("cover/".$rooms->cover)) {
+                File::delete("cover/".$rooms->cover);
+            }
+            $file=$request->file("cover");
+            $rooms->cover=time()."_".$file->getClientOriginalName();
+            $file->move(\public_path("/cover"),$rooms->cover);
+            $request['cover']=$rooms->cover;
+        }
+
+           $rooms->update([
+            "price" =>$request->price,
+            "name" =>$request->name,
+            "bed" =>$request->bed,
+            "bath" =>$request->bath,
+            "room" =>$request->room,
+            "cover" =>$imageName,
+            "description" =>$request->description,
+           ]);
+
+           if($request->hasFile("images")){
+               $files=$request->file("images");
+               foreach($files as $file){
+                   $imageName=time().'_'.$file->getClientOriginalName();
+                   $request["room_id"]=$id;
+                   $request["image"]=$imageName;
+                   $file->move(\public_path("images"),$imageName);
+                   Image::create($request->all());
+
+               }
+           }
+
+           return redirect('dashboard');
     }
 
     /**
