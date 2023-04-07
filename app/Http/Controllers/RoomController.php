@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\room;
+use App\Models\image;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -11,7 +13,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $rooms=room::all();
+        return view('dashboard')->with('rooms',$rooms);
     }
 
     /**
@@ -27,7 +30,35 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile("cover")){
+            $file=$request->file("cover");
+            $imageName=time().'_'.$file->getClientOriginalName();
+            $file->move(\public_path("cover/"),$imageName);
+
+            $room =new room([
+                "price" =>$request->price,
+                "name" =>$request->name,
+                "bed" =>$request->bed,
+                "bath" =>$request->bath,
+                "room" =>$request->room,
+                "cover" =>$imageName,
+                "description" =>$request->description,
+            ]);
+           $room->save();
+        }
+
+            if($request->hasFile("images")){
+                $files=$request->file("images");
+                foreach($files as $file){
+                    $imageName=time().'_'.$file->getClientOriginalName();
+                    $request['room_id']=$room->id;
+                    $request['image']=$imageName;
+                    $file->move(\public_path("/images"),$imageName);
+                    image::create($request->all());
+                }
+            }
+
+            return redirect("dashboard");
     }
 
     /**

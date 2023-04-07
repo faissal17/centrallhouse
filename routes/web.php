@@ -16,7 +16,7 @@ use App\Http\Controllers\RoomController;
 
 // Room Crud Routes
 
-Route::resource('room',RoomController::class);
+Route::resource('room', RoomController::class);
 
 // end Room Crud Routes
 
@@ -59,7 +59,5 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [RoomController::class, 'index'])->name('dashboard');
 });

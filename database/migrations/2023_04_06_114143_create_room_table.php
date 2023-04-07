@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('bed');
             $table->integer('bath');
             $table->integer('room');
-            $table->text('cover');
+            $table->string('cover');
             $table->string('description');
             $table->timestamps();
         });
