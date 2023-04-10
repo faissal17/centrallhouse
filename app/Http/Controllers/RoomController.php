@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\room;
 use App\Models\image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class RoomController extends Controller
 {
@@ -75,7 +76,15 @@ class RoomController extends Controller
     public function edit(string $id)
     {
         $rooms=room::findOrFail($id);
-        return view('roomscrud.editroom',compact('rooms'));
+        return view('roomscrud.editroom')->with('rooms',$rooms);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $rooms = room::findOrFail($id);
         if($request->hasFile("cover")){
             if (File::exists("cover/".$rooms->cover)) {
                 File::delete("cover/".$rooms->cover);
@@ -92,7 +101,6 @@ class RoomController extends Controller
             "bed" =>$request->bed,
             "bath" =>$request->bath,
             "room" =>$request->room,
-            "cover" =>$imageName,
             "description" =>$request->description,
            ]);
 
@@ -109,14 +117,6 @@ class RoomController extends Controller
            }
 
            return redirect('dashboard');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
     }
 
     /**

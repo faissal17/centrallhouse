@@ -23,9 +23,10 @@
 
 
 
-                        <form action="" method="POST" enctype="multipart/form-data">
+                    <form action="/room/{{$rooms->id}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method("put")
+
         				 <input type="number" name="price" class="form-control m-2" placeholder="price" value="{{$rooms->price}}">
 
         				 <input type="text" name="name" class="form-control m-2" placeholder="name" value="{{$rooms->name}}">
@@ -39,7 +40,7 @@
                          <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description">{{$rooms->description}}</Textarea>
 
                          <label class="m-2">Cover Image</label>
-                         <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover" value="{{$rooms->image}}">
+                         <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover" value="{{$rooms->cover}}">
 
                          <label class="m-2">Images</label>
                          <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="images[]" multiple>
@@ -49,9 +50,6 @@
                             <button type="submit" class="btn btn-danger mt-3 mb-2">Delete</button>
                         </div>
                     </form>
-
-
-
                    </div>
                 </div>
             </div>

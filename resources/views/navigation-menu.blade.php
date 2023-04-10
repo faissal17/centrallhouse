@@ -27,7 +27,7 @@
                                     </button>
                                 </span>
                             </x-slot>
-
+                            
                             <x-slot name="content">
                                 <div class="w-60">
                                     <!-- Team Management -->
