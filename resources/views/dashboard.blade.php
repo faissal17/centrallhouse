@@ -43,6 +43,17 @@
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>{{$room->bed}} Bed</small>
                                 <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>{{$room->bath}} Bath</small>
                                 <small><i class="fa fa-hotel text-primary me-2"></i>{{$room->room}} Rooms</small>
+
+                                @if ($room->availible)
+                                
+                                    <small class="border-start ms-3 ps-3 text-success">Availible</small>
+
+                                @else
+
+                                    <small class="border-start ms-3 ps-3 text-warning">Availible</small>
+
+                                @endif
+
                             </div>
                             <p class="text-body mb-3">{{$room->description}}</p>
                             <div class="d-flex justify-content-between">

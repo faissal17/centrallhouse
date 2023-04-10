@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('room');
             $table->string('cover');
             $table->string('description');
+            $table->boolean("availible")->default(1);
             $table->timestamps();
         });
     }
