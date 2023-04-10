@@ -124,6 +124,21 @@ class RoomController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $rooms = room::findOrFail($id);
+
+        if (File::exists("cover/".$rooms->cover)) {
+            File::delete("cover/".$rooms->cover);
+        }
+
+        $images=Image::where("room_id",$rooms->id)->get();
+         foreach($images as $image){
+         if (File::exists("images/".$image->image)) {
+            File::delete("images/".$image->image);
+        }
+         }
+
+
+         $rooms->delete();
+         return redirect('dashboard');
     }
 }

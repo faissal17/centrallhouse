@@ -47,9 +47,13 @@
 
                         <div class="buttons">
                             <button type="submit" class="btn btn-info mt-3 mb-2">Edit</button>
-                            <button type="submit" class="btn btn-danger mt-3 mb-2">Delete</button>
                         </div>
                     </form>
+                     <form action="/room/{{$rooms->id}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method("delete")
+                            <button type="submit" class="btn btn-danger mt-3 mb-2">Delete</button>
+                     </form>
                    </div>
                 </div>
             </div>

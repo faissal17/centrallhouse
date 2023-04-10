@@ -16,9 +16,7 @@ use App\Http\Controllers\RoomController;
 
 // Room Crud Routes
 
-Route::resource('room', RoomController::class);
-Route::get('editroom/{id}', [RoomController::class,'edit']);
-
+Route::resource('room', RoomController::class)->excepte('delete');
 
 // end Room Crud Routes
 
@@ -33,15 +31,11 @@ Route::get('/', function () {
 Route::get('createroom', function () {
     return view('roomscrud.createroom');
 });
+Route::get('editroom/{id}', [RoomController::class,'edit']);
 
 
 
-
-
-
-
-
-// end of routes to direct me to diffrent pages
+// end of routes that direct me to diffrent pages
 
 
 
