@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\bookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,15 +40,13 @@ Route::get('createtable', function(){
 });
 
 
+
 // end of routes that direct me to diffrent pages
 
 
 
 // routes in the navbar
 
-Route::get('/booking', function () {
-    return view('booking');
-})->name('booking');
 Route::get('/tables', function () {
     return view('tables');
 })->name('tables');
