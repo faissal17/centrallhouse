@@ -51,7 +51,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner mt-2">
+        <div class="carousel-inner mt-2" id="home">
             <div class="carousel-item active">
                 <img src="./images/menara-gardens-5924722.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption">

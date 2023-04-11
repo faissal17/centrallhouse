@@ -2,6 +2,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    color: black;
 }
 
 .site-hero.inner:before {
@@ -17,7 +18,7 @@
 .site-hero-inner .heading {
     font-size: 40px;
     font-family: "Playfair Display", times, serif;
-    color: #ffff;
+    color: aliceblue;
     line-height: 1;
     font-weight: bold;
 }

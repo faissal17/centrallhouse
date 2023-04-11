@@ -45,12 +45,12 @@
                                 <small><i class="fa fa-hotel text-primary me-2"></i>{{$room->room}} Rooms</small>
 
                                 @if ($room->availible)
-                                
+
                                     <small class="border-start ms-3 ps-3 text-success">Availible</small>
 
                                 @else
 
-                                    <small class="border-start ms-3 ps-3 text-warning">Availible</small>
+                                    <small class="border-start ms-3 ps-3 text-warning">Not Availible</small>
 
                                 @endif
 
