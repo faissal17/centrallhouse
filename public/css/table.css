@@ -1,8 +1,7 @@
-#rooms {
+/* #rooms {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    color: black;
 }
 
 .site-hero.inner:before {
@@ -58,11 +57,60 @@
     }
 }
 
-.username {
-    color: crimson;
-}
-
 .buttons {
     display: flex;
     justify-content: space-between;
+} */
+
+.card {
+    width: 280px;
+    height: 360px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.5s ease-in-out;
+    width: 280px;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(20px);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 176, 155, 0.5),
+        rgba(150, 201, 61, 1)
+    );
+    z-index: 2;
+    transition: 0, 5s all;
+    opacity: 0;
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-body {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
 }

@@ -33,8 +33,6 @@
     font-size: 15px;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Verdana, sans-serif;
 }
 
 .navbar-light .navbar-brand {
