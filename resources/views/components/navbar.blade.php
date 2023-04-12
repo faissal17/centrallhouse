@@ -1,8 +1,4 @@
 
-<head>
-    <link rel="stylesheet" href="./css/navbar.css">
-</head>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
     <div class="container">
         <a class="navbar-brand" href="/"><span class="text-warning">Central</span><span class="text-danger fw-bold">House</span></a>
@@ -30,4 +26,36 @@
 
 <script src="./js/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<style>
+    .navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Verdana, sans-serif;
+}
+
+.navbar-light .navbar-brand {
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.collapse {
+    visibility: visible;
+}
+
+
+ </style>
+
 

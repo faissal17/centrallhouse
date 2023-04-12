@@ -19,8 +19,11 @@ use App\Http\Controllers\bookingController;
 
 Route::resource('room', RoomController::class);
 Route::get('editroom/{id}', [RoomController::class,'edit']);
+Route::get('booking/{id}', [bookingController::class,'show']);
+
 
 // end Room Crud Routes
+
 
 
 Route::get('/', function () {
