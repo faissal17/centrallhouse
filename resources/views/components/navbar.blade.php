@@ -52,8 +52,6 @@
 .collapse {
     visibility: visible;
 }
-
-
  </style>
 
 

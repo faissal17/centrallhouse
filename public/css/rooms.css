@@ -21,6 +21,7 @@ body {
 .site-hero-inner {
     height: 100vh;
     min-height: 700px;
+    margin-bottom: 40px;
 }
 
 .site-hero-inner .heading {

@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" href="{{asset('css/table.css')}}">
 </head>
-{{-- <section class="site-hero inner" id="rooms" style="background-image:url('./images/hansel.jpg')">
+<section class="site-hero inner" id="rooms" style="background-image:url('./images/hansel.jpg')">
     <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
             <div class="col-md-10 text-center" data-aos="fade">
@@ -12,16 +12,66 @@
             </div>
         </div>
     </div>
-</section> --}}
+</section>
 
-<div class="card mt-5 ms-5" style="width: 18rem;">
-    <img class="card-img-top" src="{{asset('images/hero_4.jpg')}}" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+<body>
+
+    <div class="team-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-team">
+          <div class="img-area">
+            <img src="{{asset('images/hero_4.jpg')}}" class="img-responsive" alt="">
+          </div>
+          <div class="img-text">
+            <h1>Table 1</h1>
+            <h5>Price</h5>
+          </div>
+          <h5 class="text-success text-center">Availible</h5>
+          <p>Here is the description of each table</p>
+          <div class="d-flex justify-content-center align-items-center pb-3">
+          <button class="btn btn-warning">Reserve Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-team">
+          <div class="img-area">
+            <img src="{{asset('images/hos.jpg')}}" class="img-responsive" alt="">
+          </div>
+          <div class="img-text">
+            <h1>Table 2</h1>
+            <h5>Price</h5>
+          </div>
+          <h5 class="text-success text-center">Availible</h5>
+          <p>Here is the description of each table</p>
+          <div class="d-flex justify-content-center align-items-center pb-3">
+            <button class="btn btn-warning">Reserve Now</button>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-team">
+          <div class="img-area">
+            <img src="{{asset('images/hotelroom.jpg')}}" class="img-responsive" alt="">
+          </div>
+          <div class="img-text">
+            <h1>Table 3</h1>
+            <h5>Price</h5>
+          </div>
+          <h5 class="text-success text-center">Availible</h5>
+          <p>Here is the description of each table</p>
+          <div class="d-flex justify-content-center align-items-center pb-3">
+            <button class="btn btn-warning">Reserve Now</button>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+</body>
 
+<x-footer/>
 
 </x-app-layout>

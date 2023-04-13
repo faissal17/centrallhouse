@@ -1,8 +1,4 @@
 
-<head>
-    <link rel="stylesheet" href="./css/rooms.css">
-</head>
-
 <div class="container availability-form mt-8" style="width: 95%">
     <div class="row">
         <div class="col-lg-12 bg-white p-4 me-4 doo">
@@ -42,3 +38,15 @@
         </div>
     </div>
 </div>
+
+<style>
+
+#check {
+    font-weight: bold;
+    color: black;
+}
+
+.doo {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+</style>

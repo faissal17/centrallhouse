@@ -1,4 +1,4 @@
-/* #rooms {
+#rooms {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -60,57 +60,71 @@
 .buttons {
     display: flex;
     justify-content: space-between;
-} */
-
-.card {
-    width: 280px;
-    height: 360px;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    transition: 0.5s ease-in-out;
-    width: 280px;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
-.card:hover {
-    transform: translateY(20px);
+
+/* Here is the style of the cards */
+
+.team-area {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.single-team {
+    background-color: #0d131d;
+    margin-bottom: 10px;
+}
+
+.single-team p {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-area {
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.img-area img {
     display: block;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 176, 155, 0.5),
-        rgba(150, 201, 61, 1)
-    );
-    z-index: 2;
-    transition: 0, 5s all;
-    opacity: 0;
-}
-
-.card:hover:before {
-    opacity: 1;
-}
-
-.card img {
+    height: 113%;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
-.card-body {
-    position: relative;
-    z-index: 3;
+.img-area:hover img {
+    transform: scale(1.1);
+}
+
+.img-area img {
+    transition: all 0.4s ease 0s;
+}
+
+@media (max-width: 768px) {
+    .img-area img {
+        display: inline-block;
+    }
+}
+
+.img-text {
+    padding: 25px;
     color: #fff;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.5s all;
+    display: flex;
+    align-items: center;
+}
+
+.img-text h1 {
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-family: bignoodletitling;
+    letter-spacing: 5px;
+    flex: 1;
+}
+
+.img-text h5 {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: crimson;
 }
