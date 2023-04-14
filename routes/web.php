@@ -25,11 +25,11 @@ Route::get('booking/{id}', [bookingController::class,'show']);
 
 // end Room Crud Routes
 
-
 // begin of tables Routes
-
-Route::resource('table',TableController::class);
 Route::get('/tables', [TableController::class, 'index'])->name('tables');
+Route::resource('table',TableController::class);
+Route::get('edittable/{id}', [TableController::class,'edit']);
+
 
 
 
@@ -60,9 +60,6 @@ Route::get('createtable', function(){
 
 // routes in the navbar
 
-Route::get('/tables', function () {
-    return view('tables');
-})->name('tables');
 
 // end of routes in the navbar
 

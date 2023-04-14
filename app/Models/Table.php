@@ -13,6 +13,6 @@ class Table extends Model
         'name',
         'price',
         'image',
-        'descrption',
+        'description',
     ];
 }

@@ -12,7 +12,7 @@ class TableController extends Controller
      */
     public function index()
     {
-        $tables=table::all();
+        $tables = Table::all();
         return view('tables')->with('tables',$tables);
     }
 
@@ -29,20 +29,14 @@ class TableController extends Controller
      */
     public function store(Request $request)
     {
-
-        // $request->validate([
-        //     'name' => 'required|max:255',
-        //     'image' => 'required',
-        //     'price' => 'required|numeric',
-        //     'description' => 'required|max:1000',
-        // ]);
+        // dd($request->all());
 
         if($request->hasFile("image")){
             $file = $request->file("image");
             $imageName=time().'_'.$file->getClientOriginalName();
-            $file->move(\public_path("image/"),$imageName);
+            $file->move(\public_path("cover/"),$imageName);
 
-        $tables = new table([
+        $tables = new Table([
             'name'=>$request->name,
             'image'=>$imageName,
             'price'=>$request->price,
@@ -66,15 +60,16 @@ class TableController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Table $table)
+    public function edit(Table $table ,$id)
     {
-        //
+        $tables=Table::findOrFail($id);
+        return view('tablescrud.edittable')->with('tables',$tables);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Table $table)
+    public function update(Request $request, Table $table,$id)
     {
         //
     }
@@ -82,7 +77,7 @@ class TableController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Table $table)
+    public function destroy(Table $table,$id)
     {
         //
     }
