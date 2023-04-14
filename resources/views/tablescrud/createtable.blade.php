@@ -28,7 +28,7 @@
 
                          <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description"></Textarea>
 
-                         <label class="m-2">Cover Image</label>
+                         <label class="m-2">Image</label>
                          <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover">
 
                         <button type="submit" class="btn btn-danger mt-3">Submit</button>

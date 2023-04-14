@@ -26,7 +26,7 @@
           </div>
           <div class="img-text">
             <h1>Table 1</h1>
-            <h5>Price</h5>
+            <h5>55$</h5>
           </div>
           <h5 class="text-success text-center">Availible</h5>
           <p>Here is the description of each table</p>
@@ -42,7 +42,7 @@
           </div>
           <div class="img-text">
             <h1>Table 2</h1>
-            <h5>Price</h5>
+            <h5>20$</h5>
           </div>
           <h5 class="text-success text-center">Availible</h5>
           <p>Here is the description of each table</p>
@@ -58,7 +58,7 @@
           </div>
           <div class="img-text">
             <h1>Table 3</h1>
-            <h5>Price</h5>
+            <h5>30$</h5>
           </div>
           <h5 class="text-success text-center">Availible</h5>
           <p>Here is the description of each table</p>

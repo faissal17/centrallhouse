@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\TableController;
 use App\Http\Controllers\bookingController;
 
 /*
@@ -24,6 +25,15 @@ Route::get('booking/{id}', [bookingController::class,'show']);
 
 // end Room Crud Routes
 
+
+// begin of tables Routes
+
+Route::resource('table',TableController::class);
+Route::get('/tables', [TableController::class, 'index'])->name('tables');
+
+
+
+// end of tables Routes
 
 
 Route::get('/', function () {

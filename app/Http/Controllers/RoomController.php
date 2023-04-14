@@ -32,11 +32,11 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         if($request->hasFile("cover")){
-            $file=$request->file("cover");
+            $file = $request->file("cover");
             $imageName=time().'_'.$file->getClientOriginalName();
             $file->move(\public_path("cover/"),$imageName);
 
-            $room =new room([
+            $room = new room([
                 "price" =>$request->price,
                 "name" =>$request->name,
                 "bed" =>$request->bed,
@@ -45,13 +45,14 @@ class RoomController extends Controller
                 "cover" =>$imageName,
                 "description" =>$request->description,
             ]);
+
            $room->save();
         }
 
             if($request->hasFile("images")){
-                $files=$request->file("images");
+                $files = $request->file("images");
                 foreach($files as $file){
-                    $imageName=time().'_'.$file->getClientOriginalName();
+                    $imageName = time().'_'.$file->getClientOriginalName();
                     $request['room_id']=$room->id;
                     $request['image']=$imageName;
                     $file->move(\public_path("/images"),$imageName);

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Faker\Factory;
 use App\Models\room;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -13,15 +14,16 @@ class RoomSedder extends Seeder
      */
     public function run(): void
     {
-        room::creat([
+        $faker = Factory::create();
+
+        room::create([
             'price'=>'200',
             'name'=>'Luxuary',
             'bed'=>'3',
             'bath'=>'2',
             'room'=>'3',
-            'cover'=>'',
-            'image'=>'',
+            'cover'=>$faker->imageUrl('./images/hos.jpg'),
             'description'=>'Luxuary room, comfortable and huge',
-        ]),
+        ]);
     }
 }
