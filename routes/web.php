@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\TourController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\bookingController;
 
@@ -25,15 +26,25 @@ Route::get('booking/{id}', [bookingController::class,'show']);
 
 // end Room Crud Routes
 
+
+
 // begin of tables Routes
+
+
 Route::get('/tables', [TableController::class, 'index'])->name('tables');
 Route::resource('table',TableController::class);
 Route::get('edittable/{id}', [TableController::class,'edit']);
 
 
-
-
 // end of tables Routes
+
+// begin of tour routes
+
+Route::get('/tour',[TourController::class,'index'])->name('tours');
+// end of tour routes
+
+
+
 
 
 Route::get('/', function () {
@@ -55,13 +66,6 @@ Route::get('createtable', function(){
 
 
 // end of routes that direct me to diffrent pages
-
-
-
-// routes in the navbar
-
-
-// end of routes in the navbar
 
 
 Route::middleware([

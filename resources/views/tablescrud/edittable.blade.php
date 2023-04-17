@@ -23,8 +23,9 @@
             <div class="col-lg-6">
                 <h3 class="text-center text-danger"><b>Edit Table</b></h3>
                 <div class="form-group">
-                    <form action="/table" method="POST" enctype="multipart/form-data">
+                    <form action="/table/{{ $tables->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('put')
                         <input type="text" name="name" class="form-control m-2" placeholder="name"
                             value="{{ $tables->name }}">
 
@@ -36,7 +37,14 @@
                         <label class="m-2">Image</label>
                         <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image">
 
-                        <button type="submit" class="btn btn-danger mt-3">Submit</button>
+
+                        <button type="submit" class="btn btn-info mt-3 mb-2">Edit</button>
+
+                    </form>
+                    <form action="/table/{{ $tables->id }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn btn-danger mt-3 mb-2">Delete</button>
                     </form>
                 </div>
             </div>

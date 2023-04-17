@@ -56,10 +56,10 @@
                         <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="images[]"
                             multiple>
 
-                        <div class="buttons">
-                            <button type="submit" class="btn btn-info mt-3 mb-2">Edit</button>
-                        </div>
+                        <button type="submit" class="btn btn-info mt-3 mb-2">Edit</button>
+
                     </form>
+
                     <form action="/room/{{ $rooms->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('delete')

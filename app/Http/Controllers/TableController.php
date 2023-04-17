@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Table;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class TableController extends Controller
 {
@@ -60,7 +61,7 @@ class TableController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Table $table ,$id)
+    public function edit($id)
     {
         $tables=Table::findOrFail($id);
         return view('tablescrud.edittable')->with('tables',$tables);
@@ -69,16 +70,35 @@ class TableController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Table $table,$id)
+    public function update(Request $request, $id)
     {
-        //
+        $tables = Table::findOrFail($id);
+        if($request->hasFile("image")){
+            if(File::exist("cover/".$tables->cover)){
+                File::delete("cover/".$tables->cover);
+            }
+            $file=$request->file("image");
+            $tables->cover=time()."_".$file->getClientOriginalName();
+            $file->move(\public_path("/cover"),$tables->cover);
+            $request['image']=$tables->cover;
+        }
+
+        $tables->update([
+            'name'=>$request->name,
+            'price'=>$request->price,
+            'description'=>$request->description,
+        ]);
+
+        return redirect('tables');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Table $table,$id)
+    public function destroy($id)
     {
-        //
+        $tables = Table::findOrFail($id);
+        $tables->delete();
+        return redirect('tables');
     }
 }
