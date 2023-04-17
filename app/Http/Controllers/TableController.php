@@ -74,12 +74,12 @@ class TableController extends Controller
     {
         $tables = Table::findOrFail($id);
         if($request->hasFile("image")){
-            if(File::exist("cover/".$tables->cover)){
-                File::delete("cover/".$tables->cover);
+            if(File::exists("image/".$tables->image)){
+                File::delete("image/".$tables->image);
             }
             $file=$request->file("image");
-            $tables->cover=time()."_".$file->getClientOriginalName();
-            $file->move(\public_path("/cover"),$tables->cover);
+            $tables->image=time()."_".$file->getClientOriginalName();
+            $file->move(\public_path("/cover"),$tables->image);
             $request['image']=$tables->cover;
         }
 
