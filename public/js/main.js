@@ -12,3 +12,5 @@ const scroll = ScrollReveal({
 });
 sr.reveal("#about-section");
 scroll.reveal("#service");
+
+// sidebar js

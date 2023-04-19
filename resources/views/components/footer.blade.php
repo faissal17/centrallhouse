@@ -4,53 +4,61 @@
         <div class="row text-center text-md-left">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">centrallhouse</h5>
-                <p>the Grand CentrallHouse is a luxurious and elegant accommodation option for discerning travelers featuring high-end furnishings,
+                <p>the Grand CentrallHouse is a luxurious and elegant accommodation option for discerning travelers
+                    featuring high-end furnishings,
                     premium bedding, and modern amenities such as flat-screen TVs and high-speed Wi-Fi.</p>
             </div>
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Social media</h5>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-instagram"></i> instagrame</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-instagram"></i>
+                        instagrame</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-facebook"></i>
+                        Facebook</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-twitter"></i>
+                        Twitter</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-brands fa-whatsapp"></i>
+                        Whatsapp</a>
                 </p>
             </div>
-
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">HelpFul links</h5>
                 <p>
-                    <a href="#" class="text-light text-decoration-none">Your Account</a>
+                    <a href="user/profile" class="text-light text-decoration-none">Your Account</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none">Reserve Tour</a>
+                    <a href="{{ route('tours') }}" class="text-light text-decoration-none">Reserve Tour</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none">Reserve Room</a>
+                    <a href="{{ route('dashboard') }}" class="text-light text-decoration-none">Reserve Room</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none">Reserve Meal</a>
+                    <a href="{{ route('tables') }}" class="text-light text-decoration-none">Reserve Meal</a>
                 </p>
             </div>
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-location-dot"></i> Adresse : Amssafah 32، 40000</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-location-dot"></i>
+                        Adresse : Amssafah 32، 40000</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-envelope"></i> Centrall@gmail.com</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-envelope"></i>
+                        Centrall@gmail.com</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-phone"></i> +212647486952</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-phone"></i>
+                        +212647486952</a>
                 </p>
                 <p>
-                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-fax"></i> +012638254638</a>
+                    <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-fax"></i>
+                        +012638254638</a>
                 </p>
             </div>
         </div>

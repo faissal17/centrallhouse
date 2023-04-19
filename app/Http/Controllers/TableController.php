@@ -47,7 +47,7 @@ class TableController extends Controller
         $tables->save();
     }
 
-        return redirect('tables');
+        return redirect('tables')->with('message','Table has been added');
     }
 
     /**

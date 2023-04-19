@@ -60,7 +60,7 @@ class RoomController extends Controller
                 }
             }
 
-            return redirect("dashboard");
+            return redirect("dashboard")->with('message','Room has been added');
     }
 
     /**

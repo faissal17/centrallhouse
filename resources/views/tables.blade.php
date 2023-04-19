@@ -51,5 +51,11 @@
     </div>
 
     <x-footer />
-
+    @if (Session::has('message'))
+        <script>
+            swal("Message", "{{ Session::get('message') }}", 'success', {
+                button: "OK",
+            });
+        </script>
+    @endif
 </x-app-layout>

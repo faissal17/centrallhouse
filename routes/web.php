@@ -31,7 +31,7 @@ Route::get('booking/{id}', [bookingController::class,'show']);
 // begin of tables Routes
 
 
-Route::get('/tables', [TableController::class, 'index'])->name('tables');
+Route::get('/tables', [TableController::class, 'index'])->name('tables')->middleware('auth');
 Route::resource('table',TableController::class);
 Route::get('edittable/{id}', [TableController::class,'edit']);
 
@@ -40,7 +40,7 @@ Route::get('edittable/{id}', [TableController::class,'edit']);
 
 // begin of tour routes
 
-Route::get('/tour',[TourController::class,'index'])->name('tours');
+Route::get('/tour',[TourController::class,'index'])->name('tours')->middleware('auth');
 // end of tour routes
 
 
@@ -64,6 +64,10 @@ Route::get('createtable', function(){
 });
 
 
+Route::get('/AdminBoard', function () {
+return view('AdminBoard');
+});
+
 
 // end of routes that direct me to diffrent pages
 
@@ -73,5 +77,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', [RoomController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [RoomController::class, 'index'])->name('dashboard')->middleware('auth');
 });
+
