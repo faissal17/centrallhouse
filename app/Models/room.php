@@ -17,6 +17,7 @@ class room extends Model
         'room',
         'cover',
         'description',
+        'availible',
     ];
 
     public function images(){
