@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\room;
 use App\Models\booking;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class bookingController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new resource
      */
     public function create()
     {
@@ -28,16 +29,41 @@ class bookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $room=room::find($request->room_id);
+
+        // dd($request->all());
+
+        $bookings = [
+            'user_id'=>auth()->user()->id,
+            'room_id'=>$request->room_id,
+            'arrive'=>$request->arrive,
+            'leave'=>$request->leave,
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+        ];
+
+        $room->update([
+            'availible' => 0
+        ]);
+
+
+        booking::create($bookings);
+
+        return redirect("dashboard")->with('message','Room has been added');
+
     }
 
     /**
      * Display the specified resource.
      */
     public function show($id)
+
     {
-        $bookings = booking::find($id);
-        return view('booking' ,compact('bookings'));
+        // return 'messi';
+        $room=room::find($id);
+        $room_id = $id;
+        return view('booking' ,compact('room', 'room_id'));
     }
 
     /**

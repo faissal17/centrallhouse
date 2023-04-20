@@ -1,2 +1,1 @@
 <x-head />
-<x-sidebar />

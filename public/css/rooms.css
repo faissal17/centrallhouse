@@ -71,15 +71,6 @@ body {
     color: crimson;
 }
 
-#check {
-    font-weight: bold;
-    color: black;
-}
-
-.doo {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-}
-
 .Image {
     height: 200px;
     margin-bottom: 10px;

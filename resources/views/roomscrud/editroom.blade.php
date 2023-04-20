@@ -32,19 +32,19 @@
                         @method('put')
 
                         <input type="number" name="price" class="form-control m-2" placeholder="price"
-                            value="{{ $rooms->price }}">
+                            value="{{ $rooms->price }}" min="30">
 
                         <input type="text" name="name" class="form-control m-2" placeholder="name"
                             value="{{ $rooms->name }}">
 
                         <input type="number" name="bed" class="form-control m-2" placeholder="number of bed"
-                            value="{{ $rooms->bed }}">
+                            value="{{ $rooms->bed }}" min="1" max="4">
 
                         <input type="number" name="bath" class="form-control m-2" placeholder="number of bath"
-                            value="{{ $rooms->bath }}">
+                            value="{{ $rooms->bath }}" min="1" max="4">
 
                         <input type="number" name="room" class="form-control m-2" placeholder="number of room"
-                            value="{{ $rooms->room }}">
+                            value="{{ $rooms->room }}" min="1" max="4">
 
                         <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description">{{ $rooms->description }}</Textarea>
 

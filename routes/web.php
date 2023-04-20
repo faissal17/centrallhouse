@@ -22,6 +22,7 @@ use App\Http\Controllers\bookingController;
 Route::resource('room', RoomController::class);
 Route::get('editroom/{id}', [RoomController::class,'edit']);
 Route::get('booking/{id}', [bookingController::class,'show']);
+Route::post('booking/make', [bookingController::class,'store'])->name('booking.make');
 
 
 // end Room Crud Routes
