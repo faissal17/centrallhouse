@@ -7,6 +7,15 @@
     <body>
         <section class="banner">
             <h2>BOOK YOUR ROOM NOW</h2>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="card-container">
                 <div class="card-img">
                     <img src="../cover/{{ $room->cover }}">

@@ -18,6 +18,5 @@
                 </div>
             </div>
         </section>
-
     </body>
 </x-app-layout>

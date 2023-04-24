@@ -31,6 +31,12 @@ class bookingController extends Controller
     {
         $room=room::find($request->room_id);
 
+        $validatedData = $request->validate([
+            'arrive' => 'required|date',
+            'leave' => 'required|date|after:arrive',
+            // other validation rules for your form fields...
+        ]);
+
         // dd($request->all());
 
         $bookings = [
@@ -50,7 +56,7 @@ class bookingController extends Controller
 
         booking::create($bookings);
 
-        return redirect("dashboard")->with('message','Room has been added');
+        return redirect("dashboard")->with('message','Room has been reserved');
 
     }
 
@@ -89,4 +95,6 @@ class bookingController extends Controller
     {
         //
     }
+
+
 }

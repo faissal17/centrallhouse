@@ -56,8 +56,13 @@
                                 </div>
                                 <p class="text-body mb-3">{{ $room->description }}</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4"
-                                        href="/booking/{{ $room->id }}">View Detail</a>
+                                    @if ($room->availible)
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4"
+                                            href="/booking/{{ $room->id }}">Book Now</a>
+                                    @else
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="" disabled>Not
+                                            Available</a>
+                                    @endif
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4"
                                         href="/editroom/{{ $room->id }}">Edit Room</a>
                                 </div>
