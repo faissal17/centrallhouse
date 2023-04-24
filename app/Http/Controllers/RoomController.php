@@ -143,4 +143,18 @@ class RoomController extends Controller
          $rooms->delete();
          return redirect('dashboard');
     }
+
+    public function filter(Request $request)
+{
+    $beds = $request->input('bed');
+    $baths = $request->input('bath');
+    $rooms = $request->input('room');
+
+    $rooms = room::where('bed', $beds)
+        ->where('bath', $baths)
+        ->where('room', $rooms)
+        ->get();
+
+    return view('dashboard');
+}
 }

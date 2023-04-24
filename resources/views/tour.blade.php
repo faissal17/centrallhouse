@@ -18,5 +18,7 @@
                 </div>
             </div>
         </section>
+
+        <x-footer />
     </body>
 </x-app-layout>

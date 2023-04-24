@@ -44,7 +44,7 @@
                                             class="fa fa-bed text-primary me-2"></i>{{ $room->bed }} Bed</small>
                                     <small class="border-end me-3 pe-3"><i
                                             class="fa fa-bath text-primary me-2"></i>{{ $room->bath }} Bath</small>
-                                    <small>{{ $room->room }}
+                                    <small><i class="fa fa-hotel text-primary me-2"></i>{{ $room->room }}
                                         Rooms</small>
 
                                     @if ($room->availible)
