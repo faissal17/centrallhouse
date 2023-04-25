@@ -19,10 +19,19 @@
             </div>
         </section>
         <div class="card-section">
-            <div class="container my-3">
+            <div class="container">
                 <div class="card">
-                    <div class="imgBx"></div>
-                    <div class="content"></div>
+                    <div class="imgBx">
+                        <img src="{{ asset('images/1681141117_hero_4.jpg') }}">
+                    </div>
+                    <div class="content">
+                        <h1 class="text-danger">Fanna</h1>
+                        <h2 class="pb-3">price</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ex soluta recusandae sed,
+                            voluptatem culpa?</p>
+                        <a href="#"><button class="btn btn-outline-primary pt-2" type="submit">Reserve A
+                                Place</button></a>
+                    </div>
                 </div>
             </div>
         </div>

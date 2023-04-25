@@ -34,6 +34,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
 }
 
 .container {
@@ -46,9 +47,64 @@ section {
 }
 
 .container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 350px;
     height: 300px;
-    background: #fff;
+    background: #dbcdcd;
     border-radius: 20px;
     box-shadow: 0 35px 88px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    height: 220px;
+    background-color: #333;
+    width: 300px;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx {
+    top: -50px;
+    scale: 0.75;
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    width: 100%;
+    top: 240px;
+    height: 33px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 180px;
+    height: 250px;
+}
+
+.container .card .content h1 {
+    font-size: 2rem;
+    font-weight: 700;
 }

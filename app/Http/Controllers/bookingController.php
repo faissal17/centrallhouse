@@ -32,9 +32,8 @@ class bookingController extends Controller
         $room=room::find($request->room_id);
 
         $validatedData = $request->validate([
-            'arrive' => 'required|date',
+            'arrive' => 'required|date|after_or_equal:today',
             'leave' => 'required|date|after:arrive',
-            // other validation rules for your form fields...
         ]);
 
         // dd($request->all());
