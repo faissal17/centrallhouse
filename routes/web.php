@@ -23,7 +23,6 @@ Route::resource('room', RoomController::class);
 Route::get('editroom/{id}', [RoomController::class,'edit']);
 Route::get('booking/{id}', [bookingController::class,'show']);
 Route::post('booking/make', [bookingController::class,'store'])->name('booking.make');
-// Route::post('rooms/filter', RoomController::class)->name('rooms.filter');
 
 
 // end Room Crud Routes
@@ -58,6 +57,9 @@ Route::get('/', function () {
 
 Route::get('createroom', function () {
     return view('roomscrud.createroom');
+});
+Route::get('createtour', function () {
+    return view('tourcrud.createtour');
 });
 
 

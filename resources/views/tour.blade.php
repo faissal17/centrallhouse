@@ -12,13 +12,20 @@
                             class="text-danger">Tours</span><strong class="text-light"> In Marrakech</strong></h1>
                     <p>Explore Marrakech with us</p>
                     <div class="d-flex justify-content-center align-items-center mt-2">
-                        <button class="text-light btnone">Add Tour</button>
+                        <a href="{{ asset('createtour') }}"><button class="text-light btnone">Add Tour</button></a>
                         {{-- <button class="text-light btntwo">Discover More</button> --}}
                     </div>
                 </div>
             </div>
         </section>
-
+        <div class="card-section">
+            <div class="container my-3">
+                <div class="card">
+                    <div class="imgBx"></div>
+                    <div class="content"></div>
+                </div>
+            </div>
+        </div>
         <x-footer />
     </body>
 </x-app-layout>

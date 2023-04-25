@@ -39,8 +39,8 @@
     }
 
     .navbar-light .navbar-brand {
-        color: #000;
-        font-size: 25px;
+        color: #ff0000;
+        font-size: 20px;
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 2px;
@@ -50,6 +50,8 @@
         color: #000000;
         font-weight: 400;
         font-size: 17px;
+        justify-content: space-around;
+
     }
 
     .collapse {
