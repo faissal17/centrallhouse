@@ -51,8 +51,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 350px;
-    height: 300px;
+    width: 360px;
+    height: 320px;
     background: #dbcdcd;
     border-radius: 20px;
     box-shadow: 0 35px 88px rgba(0, 0, 0, 0.15);
@@ -92,8 +92,8 @@ section {
 .container .card .content {
     position: absolute;
     width: 100%;
-    top: 240px;
-    height: 33px;
+    top: 260px;
+    height: 34px;
     text-align: center;
     overflow: hidden;
     transition: 0.5s;

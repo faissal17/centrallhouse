@@ -29,7 +29,7 @@
                         <h2 class="pb-3">price</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ex soluta recusandae sed,
                             voluptatem culpa?</p>
-                        <a href="#"><button class="btn btn-outline-primary pt-2" type="submit">Reserve A
+                        <a href="#"><button class="btn btn-outline-primary" type="submit">Reserve A
                                 Place</button></a>
                     </div>
                 </div>

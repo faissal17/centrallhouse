@@ -14,5 +14,6 @@ class Table extends Model
         'price',
         'image',
         'description',
+        'availible',
     ];
 }

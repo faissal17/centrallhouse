@@ -17,9 +17,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('tours') }}">Tours</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link dropdown" href="user/profile">User</a>
-                </li>
+                <div class="navbar-item navbar-user dropdown">
+                    <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center"
+                        data-bs-toggle="dropdown">
+                        <img src="" alt="" />
+                        <span>
+                            <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
+                            <b class="caret"></b>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end me-1">
+                        <a href="javascript:;" class="dropdown-item">Edit Profile</a>
+                        <a href="javascript:;" class="dropdown-item">CheckOut</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="javascript:;" class="dropdown-item">Log Out</a>
+                    </div>
+                </div>
             </ul>
         </div>
     </div>

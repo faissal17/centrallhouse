@@ -40,12 +40,58 @@
                             <p>{{ $table->description }}</p>
                             <div
                                 class="d-flex justify-content-center align-items-center pb-3 justify-content-between mx-3">
-                                <button class="btn btn-warning">Reserve Now</button>
+                                <a href="#modal-table" data-bs-toggle="modal"><button class="btn btn-warning">Reserve
+                                        Now</button></a>
                                 <a href="/edittable/{{ $table->id }}"><button class="btn btn-light">Edit</button></a>
                             </div>
                         </div>
                     @endforeach
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Tables MODAL -->
+    <div class="modal fade" id="modal-table">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="" method="POST" id="form-table">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">Reserve Your Table</h5>
+                        <a href="#" class="btn-close" data-bs-dismiss="modal"></a>
+                    </div>
+                    <div class="modal-body">
+                        <!-- This Input Allows Storing table Index  -->
+                        <input type="hidden" name="table-id" id="table-id">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="fullname" class="form-control title_table" id="fullname" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="text" name="email" class="form-control title_table" id="email" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Adult Number</label>
+                            <input type="number" name="Adult" class="form-control title_table" id="Adult"
+                                min="1" max="4" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Kids Number</label>
+                            <input type="number" name="Kids" class="form-control title_table" id="Kids"
+                                min="1" max="4" />
+                        </div>
+                        <div class="mb-0">
+                            <label class="form-label">Special Request</label>
+                            <textarea name="description" class="form-control description" rows="5" id="table-description"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="save" class="btn btn-warning"
+                            id="table-save-btn">Reserve</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
