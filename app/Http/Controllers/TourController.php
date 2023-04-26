@@ -29,7 +29,22 @@ class TourController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile("image")){
+            $file = $request->file("image");
+            $imageName=time().'_'.$file->getClientOriginalName();
+            $file->move(\public_path("cover/"),$imageName);
+
+        $tours = new Tour([
+            'name'=>$request->name,
+            'image'=>$imageName,
+            'price'=>$request->price,
+            'description'=>$request->description,
+        ]);
+
+        $tours->save();
+    }
+
+        return redirect('tour');
     }
 
     /**

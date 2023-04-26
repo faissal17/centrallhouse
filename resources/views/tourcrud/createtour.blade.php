@@ -23,7 +23,7 @@
             <div class="col-lg-6">
                 <h3 class="text-center text-danger"><b>Add New Tour</b></h3>
                 <div class="form-group">
-                    <form action="/room" method="POST" enctype="multipart/form-data">
+                    <form action="table" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="number" name="price" class="form-control m-2" placeholder="price">
 

@@ -53,8 +53,8 @@ section {
     align-items: flex-start;
     width: 360px;
     height: 320px;
-    background: #dbcdcd;
-    border-radius: 20px;
+    background: #d5e3e2;
+    /* border-radius: 20px; */
     box-shadow: 0 35px 88px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
 }

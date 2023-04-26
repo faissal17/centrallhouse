@@ -39,11 +39,10 @@ Route::get('edittable/{id}', [TableController::class,'edit']);
 Route::post('table/make', [TableBookingController::class,'store'])->name('table.make');
 
 
-
 // end of tables Routes
 
 // begin of tour routes
-
+Route::resource('tour',TourController::class);
 Route::get('/tour',[TourController::class,'index'])->name('tours')->middleware('auth');
 // end of tour routes
 
