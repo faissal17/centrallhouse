@@ -20,7 +20,6 @@
                 <div class="navbar-item navbar-user dropdown">
                     <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center"
                         data-bs-toggle="dropdown">
-                        <img src="" alt="" />
                         <span>
                             <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
                             <b class="caret"></b>

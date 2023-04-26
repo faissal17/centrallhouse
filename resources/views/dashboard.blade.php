@@ -60,7 +60,7 @@
                                         <a class="btn btn-sm btn-primary rounded py-2 px-4"
                                             href="/booking/{{ $room->id }}">Book Now</a>
                                     @else
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="" disabled>Not
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Not
                                             Available</a>
                                     @endif
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4"

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Table;
 use App\Models\TableBooking;
 use Illuminate\Http\Request;
 
-class TableBooking extends Controller
+class TableBookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +29,30 @@ class TableBooking extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $tables = Table::find($request->tables_id);
+
+
+        //dd($request->request);
+
+        $Tablebooking = [
+            'user_id'=>auth()->user()->id,
+            'table_id'=>$request->tables_id,
+            'fullname'=>$request->fullname,
+            'Adult'=>$request->Adult,
+            'kids'=>$request->kids,
+            'specialrequest'=>$request->specialrequest,
+            'Email'=>$request->Email,
+
+        ];
+
+        $tables->update([
+            'availible' => 0
+        ]);
+
+        TableBooking::create($Tablebooking);
+
+        return redirect('tables');
     }
 
     /**

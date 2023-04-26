@@ -5,6 +5,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\bookingController;
+use App\Http\Controllers\TableBookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,8 @@ Route::post('booking/make', [bookingController::class,'store'])->name('booking.m
 Route::get('/tables', [TableController::class, 'index'])->name('tables')->middleware('auth');
 Route::resource('table',TableController::class);
 Route::get('edittable/{id}', [TableController::class,'edit']);
+Route::post('table/make', [TableBookingController::class,'store'])->name('table.make');
+
 
 
 // end of tables Routes

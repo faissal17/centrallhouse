@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\RoomSedder;
 use Database\Seeders\adminsedder;
+use Database\Seeders\TableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             adminsedder::class,
             RoomSedder::class,
+            TableSeeder::class,
         ]);
     }
 }

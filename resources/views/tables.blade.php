@@ -40,8 +40,14 @@
                             <p>{{ $table->description }}</p>
                             <div
                                 class="d-flex justify-content-center align-items-center pb-3 justify-content-between mx-3">
-                                <a href="#modal-table" data-bs-toggle="modal"><button class="btn btn-warning">Reserve
-                                        Now</button></a>
+                                @if ($table->availible)
+                                    <a href="#modal-table" data-bs-toggle="modal"><button
+                                            class="btn btn-warning">Reserve
+                                            Now</button></a>
+                                @else
+                                    <a href=""><button class="btn btn-warning">
+                                            Not availible</button></a>
+                                @endif
                                 <a href="/edittable/{{ $table->id }}"><button class="btn btn-light">Edit</button></a>
                             </div>
                         </div>
@@ -56,21 +62,22 @@
     <div class="modal fade" id="modal-table">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="" method="POST" id="form-table">
+                <form action="{{ route('table.make') }}" method="POST">
+                    @csrf
                     <div class="modal-header">
                         <h5 class="modal-title text-danger">Reserve Your Table</h5>
                         <a href="#" class="btn-close" data-bs-dismiss="modal"></a>
                     </div>
                     <div class="modal-body">
                         <!-- This Input Allows Storing table Index  -->
-                        <input type="hidden" name="table-id" id="table-id">
+                        <input type="hidden" name="tables_id" id="tables_id" value="{{ $table->id }}">
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
                             <input type="text" name="fullname" class="form-control title_table" id="fullname" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="text" name="email" class="form-control title_table" id="email" />
+                            <input type="text" name="Email" class="form-control title_table" id="Email" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Adult Number</label>
@@ -79,12 +86,12 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Kids Number</label>
-                            <input type="number" name="Kids" class="form-control title_table" id="Kids"
+                            <input type="number" name="kids" class="form-control title_table" id="kids"
                                 min="1" max="4" />
                         </div>
                         <div class="mb-0">
                             <label class="form-label">Special Request</label>
-                            <textarea name="description" class="form-control description" rows="5" id="table-description"></textarea>
+                            <textarea name="specialrequest" class="form-control description" rows="5" id="specialrequest"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
