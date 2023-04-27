@@ -33,8 +33,9 @@
                             <div class="pt-4 pb-0">
                                 <a href="#"><button class="btn btn-outline-primary" type="submit">Reserve A
                                         Place</button></a>
-                                <a href="#"><button class="btn btn-outline-primary" type="submit">edit A
-                                        Place</button></a>
+                                <a href="/editTour/{{ $tour->id }}"><button class="btn btn-outline-primary"
+                                        type="submit">edit a
+                                        tour</button></a>
                             </div>
                         </div>
                     </div>

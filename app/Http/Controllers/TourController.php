@@ -60,7 +60,9 @@ class TourController extends Controller
      */
     public function edit(Tour $id)
     {
-        //
+        // dd($id);
+        $tours =Tour::find($id);
+        return view('tourcrud.editTour')->with('tours',$tours);
     }
 
     /**
