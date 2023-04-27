@@ -81,8 +81,8 @@ section {
 .container .card .content {
     position: absolute;
     width: 100%;
-    top: 260px;
-    height: 34px;
+    top: 255px;
+    height: 40px;
     text-align: center;
     overflow: hidden;
     transition: 0.5s;

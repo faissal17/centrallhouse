@@ -95,8 +95,10 @@ class TourController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Tour $id)
+    public function destroy($id)
     {
-        //
+        $tours = Tour::find($id);
+        $tours->delete();
+        return redirect('tour');
     }
 }

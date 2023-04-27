@@ -37,7 +37,12 @@
                         <label class="m-2">Cover Image</label>
                         <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image">
 
-                        <button type="submit" class="btn btn-danger mt-3 ">edit</button>
+                        <button type="submit" class="btn btn-info mt-3">Edit</button>
+                    </form>
+                    <form action="/tour/{{ $tours->id }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn btn-danger mt-3 mb-2">Delete</button>
                     </form>
                 </div>
             </div>
