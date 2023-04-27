@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Tour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
 
 class TourController extends Controller
 {
@@ -68,9 +70,26 @@ class TourController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Tour $id)
+    public function update(Request $request, $id)
     {
-        //
+        $tours= Tour::find($id);
+        if($request->hasFile('image')){
+            if(File::exists("image/".$tours->image)){
+                (File::delete("image/".$tours->image));
+            }
+            $file=$request->file("image");
+            $tours->image=time()."_".$file->getClientOriginalName();
+            $file->move(\public_path("/cover"),$tours->image);
+            $request['image']=$tours->cover;
+        }
+            $tours->update([
+              'price'=>$request->price,
+              'name'=>$request->name,
+              'description'=>$request->description,
+            ]);
+
+            return redirect('tour');
+
     }
 
     /**

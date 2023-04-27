@@ -23,9 +23,9 @@
             <div class="col-lg-6">
                 <h3 class="text-center text-danger"><b>Edit Tour</b></h3>
                 <div class="form-group">
-                    <form action="/tour" method="POST" enctype="multipart/form-data">
+                    <form action="/tour/{{ $tours->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        @method('PUT')
+                        @method('put')
                         <input type="number" name="price" class="form-control m-2" placeholder="price"
                             value="{{ $tours->price }}">
 
@@ -35,7 +35,7 @@
                         <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description">{{ $tours->description }}</Textarea>
 
                         <label class="m-2">Cover Image</label>
-                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image" value="{{$ro}}">
+                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image">
 
                         <button type="submit" class="btn btn-danger mt-3 ">edit</button>
                     </form>
