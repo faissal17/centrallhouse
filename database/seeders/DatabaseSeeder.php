@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\RoomSedder;
+use Database\Seeders\TourSeeder;
 use Database\Seeders\adminsedder;
 use Database\Seeders\TableSeeder;
 
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
             adminsedder::class,
             RoomSedder::class,
             TableSeeder::class,
+            TourSeeder::class,
         ]);
     }
 }

@@ -58,11 +58,11 @@ class TourController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Tour $id)
+    public function edit($id)
     {
-        // dd($id);
-        $tours =Tour::find($id);
-        return view('tourcrud.editTour')->with('tours',$tours);
+
+        $tours = Tour::findOrFail($id);
+        return view('tourcrud.editTour',compact('tours'));
     }
 
     /**

@@ -27,14 +27,15 @@
                         @csrf
                         @method('PUT')
                         <input type="number" name="price" class="form-control m-2" placeholder="price"
+                            value="{{ $tours->price }}">
+
+                        <input type="text" name="name" class="form-control m-2" placeholder="name"
                             value="{{ $tours->name }}">
 
-                        <input type="text" name="name" class="form-control m-2" placeholder="name">
-
-                        <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description"></Textarea>
+                        <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description">{{ $tours->description }}</Textarea>
 
                         <label class="m-2">Cover Image</label>
-                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image">
+                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image" value="{{$ro}}">
 
                         <button type="submit" class="btn btn-danger mt-3 ">edit</button>
                     </form>
