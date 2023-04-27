@@ -22,7 +22,7 @@
     <div class="team-area">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-lg-4 col-md-6">
                     @foreach ($tables as $table)
                         <div class="single-team">
                             <div class="img-area">

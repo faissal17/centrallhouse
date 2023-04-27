@@ -34,14 +34,14 @@ class TourController extends Controller
             $imageName=time().'_'.$file->getClientOriginalName();
             $file->move(\public_path("cover/"),$imageName);
 
-        $tours = new Tour([
+        $tours = [
             'name'=>$request->name,
             'image'=>$imageName,
             'price'=>$request->price,
             'description'=>$request->description,
-        ]);
+        ];
 
-        $tours->save();
+        Tour::create($tours);
     }
 
         return redirect('tour');

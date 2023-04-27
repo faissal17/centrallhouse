@@ -23,7 +23,7 @@
             <div class="col-lg-6">
                 <h3 class="text-center text-danger"><b>Add New Tour</b></h3>
                 <div class="form-group">
-                    <form action="table" method="POST" enctype="multipart/form-data">
+                    <form action="/tour" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="number" name="price" class="form-control m-2" placeholder="price">
 
@@ -32,7 +32,7 @@
                         <Textarea name="description" cols="20" rows="4" class="form-control m-2" placeholder="description"></Textarea>
 
                         <label class="m-2">Cover Image</label>
-                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover">
+                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image">
 
                         <button type="submit" class="btn btn-danger mt-3 ">Submit</button>
                     </form>
