@@ -20,7 +20,7 @@ class RoomSedder extends Seeder
             'bed'=>'3',
             'bath'=>'2',
             'room'=>'3',
-            'cover'=>"1681901335_1681141117_hero_4.jpg",
+            'cover'=>"1682670676_4066189-riad-72-hotel-marrakech-morocco.jpg",
             'description'=>'Luxuary room, comfortable and huge',
         ]);
         room::create([
@@ -29,7 +29,7 @@ class RoomSedder extends Seeder
             'bed'=>'2',
             'bath'=>'2',
             'room'=>'3',
-            'cover'=>"1681907190_1681464836_1680861389_menara-gardens-5924722.jpg",
+            'cover'=>"1682670506_1681817726_hotelroom.jpg",
             'description'=>'Luxuary room, comfortable and huge',
         ]);
     }

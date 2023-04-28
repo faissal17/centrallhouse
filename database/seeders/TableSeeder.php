@@ -16,7 +16,7 @@ class TableSeeder extends Seeder
         Table::create([
             'price'=>'200',
             'name'=>'Tajin Table',
-            'image'=>"1682498643_1681222665_hotelresturent.jpg",
+            'image'=>"1682670758_1681907190_1681222665_hotelresturent.jpg",
             'description'=>'the famous moroccan dish the Tajin',
         ]);
     }
