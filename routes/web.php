@@ -5,6 +5,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\bookingController;
+use App\Http\Controllers\TourBookingController;
 use App\Http\Controllers\TableBookingController;
 
 /*
@@ -45,6 +46,8 @@ Route::post('table/make', [TableBookingController::class,'store'])->name('table.
 Route::resource('tour',TourController::class);
 Route::get('editTour/{id}',[TourController::class,'edit']);
 Route::get('/tour',[TourController::class,'index'])->name('tours')->middleware('auth');
+Route::post('tour/make', [TourBookingController::class,'store'])->name('tour.make');
+
 // end of tour routes
 
 

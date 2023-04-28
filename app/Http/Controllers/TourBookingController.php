@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tour;
 use App\Models\TourBooking;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,25 @@ class TourBookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tour = Tour::find($request->tours_id);
+        // dd($request->all());
+
+        $toursBooking = [
+            'user_id'=>auth()->user()->id,
+            'tour_id'=>$request->tours_id,
+            'fullname'=>$request->fullname,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+            'guests'=>$request->guests,
+        ];
+
+         $tour->update([
+            'availible' => 0
+         ]);
+
+       TourBooking::create($toursBooking);
+
+        return redirect('tour');
     }
 
     /**

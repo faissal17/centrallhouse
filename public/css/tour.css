@@ -43,7 +43,7 @@ section {
     align-items: flex-start;
     width: 360px;
     height: 320px;
-    background: #d5e3e2;
+    background: #ebebeb;
     box-shadow: 0 35px 88px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
 }

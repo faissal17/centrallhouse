@@ -11,11 +11,12 @@ class TourBooking extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
+        'fullname',
         'email',
         'phone',
         'guests',
-    ]
+        'availible',
+    ];
 
     public function user(){
         return $this->belongsTo(User::class);
