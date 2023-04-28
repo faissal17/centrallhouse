@@ -47,7 +47,7 @@ class TourBookingController extends Controller
 
        TourBooking::create($toursBooking);
 
-        return redirect('tour');
+        return redirect('tour')->with('message','tour has been reserved');
     }
 
     /**
