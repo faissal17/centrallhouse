@@ -26,10 +26,10 @@
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end me-1">
-                        <a href="javascript:;" class="dropdown-item">Edit Profile</a>
-                        <a href="javascript:;" class="dropdown-item">CheckOut</a>
+                        <a href="/user/profile" class="dropdown-item">Edit Profile</a>
+                        <a href="{{ asset('checkout') }}" class="dropdown-item">CheckOut</a>
                         <div class="dropdown-divider"></div>
-                        <a href="javascript:;" class="dropdown-item">Log Out</a>
+                        <a href="{{ route('logout') }}" class="dropdown-item">Log Out</a>
                     </div>
                 </div>
             </ul>

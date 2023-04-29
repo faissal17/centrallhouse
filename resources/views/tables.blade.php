@@ -12,8 +12,10 @@
                                 class="text-danger">House</span><strong class="text-light"> In Marrakech</strong></h1>
                         <p>Explore The Moroccan Food With Us</p>
                     </div>
-                    <a href="{{ asset('createtable') }}"><button type="button" class="btn btn-outline-warning">Add
-                            Table</button></a>
+                    @if (auth()->user()->isadmin == 1)
+                        <a href="{{ asset('createtable') }}"><button type="button" class="btn btn-outline-warning">Add
+                                Table</button></a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -48,7 +50,10 @@
                                     <a href=""><button class="btn btn-warning">
                                             Not availible</button></a>
                                 @endif
-                                <a href="/edittable/{{ $table->id }}"><button class="btn btn-light">Edit</button></a>
+                                @if (auth()->user()->isadmin == 1)
+                                    <a href="/edittable/{{ $table->id }}"><button
+                                            class="btn btn-light">Edit</button></a>
+                                @endif
                             </div>
                         </div>
                     @endforeach

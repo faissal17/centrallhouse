@@ -7,6 +7,7 @@ use App\Http\Controllers\TableController;
 use App\Http\Controllers\bookingController;
 use App\Http\Controllers\TourBookingController;
 use App\Http\Controllers\TableBookingController;
+use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,15 +69,15 @@ Route::get('createtour', function () {
     return view('tourcrud.createtour');
 });
 
-
 Route::get('createtable', function(){
     return view('tablescrud.createtable');
 });
 
 
-Route::get('/AdminBoard', function () {
-return view('AdminBoard');
+Route::get('/checkout', function () {
+return view('payment');
 });
+
 
 
 // end of routes that direct me to diffrent pages
@@ -90,3 +91,5 @@ Route::middleware([
     Route::get('/dashboard', [RoomController::class, 'index'])->name('dashboard')->middleware('auth');
 });
 
+
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');

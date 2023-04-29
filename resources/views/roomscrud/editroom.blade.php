@@ -24,9 +24,7 @@
             <div class="col-lg-6">
                 <h3 class="text-center text-danger"><b>Edit Room</b></h3>
                 <div class="form-group">
-
-
-
+                    
                     <form action="/room/{{ $rooms->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('put')
@@ -52,14 +50,9 @@
                         <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover"
                             value="{{ $rooms->cover }}">
 
-                        <label class="m-2">Images</label>
-                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="images[]"
-                            multiple>
-
                         <button type="submit" class="btn btn-info mt-3 mb-2">Edit</button>
 
                     </form>
-
                     <form action="/room/{{ $rooms->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('delete')

@@ -12,8 +12,12 @@
                             class="text-danger">Tours</span><strong class="text-light"> In Marrakech</strong></h1>
                     <p>Explore Marrakech with us</p>
                     <div class="d-flex justify-content-center align-items-center mt-2">
-                        <a href="{{ asset('createtour') }}"><button class="btn btn-outline-warning" type="button">Add
-                                Tour</button></a>
+                        @if (auth()->user()->isadmin == 1)
+                            <a href="{{ asset('createtour') }}"><button class="btn btn-outline-warning"
+                                    type="button">Add
+                                    Tour</button></a>
+                        @endif
+
                         {{-- <button class="text-light btntwo">Discover More</button> --}}
                     </div>
                 </div>
@@ -44,9 +48,11 @@
                                     <a href=""><button class="btn btn-outline-primary" type="submit">Not
                                             Avilible</button></a>
                             @endif
-                            <a href="/editTour/{{ $tour->id }}"><button class="btn btn-outline-primary"
-                                    type="submit">edit a
-                                    tour</button></a>
+                            @if (auth()->user()->isadmin == 1)
+                                <a href="/editTour/{{ $tour->id }}"><button class="btn btn-outline-primary"
+                                        type="submit">edit a
+                                        tour</button></a>
+                            @endif
                         </div>
                     </div>
             </div>

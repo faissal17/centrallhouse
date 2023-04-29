@@ -50,17 +50,6 @@ class RoomController extends Controller
            $room->save();
         }
 
-            if($request->hasFile("images")){
-                $files = $request->file("images");
-                foreach($files as $file){
-                    $imageName = time().'_'.$file->getClientOriginalName();
-                    $request['room_id']=$room->id;
-                    $request['image']=$imageName;
-                    $file->move(\public_path("/images"),$imageName);
-                    image::create($request->all());
-                }
-            }
-
             return redirect("dashboard")->with('message','Room has been added');
     }
 
@@ -106,18 +95,6 @@ class RoomController extends Controller
             "description" =>$request->description,
            ]);
 
-           if($request->hasFile("images")){
-               $files=$request->file("images");
-               foreach($files as $file){
-                   $imageName=time().'_'.$file->getClientOriginalName();
-                   $request["room_id"]=$id;
-                   $request["image"]=$imageName;
-                   $file->move(\public_path("images"),$imageName);
-                   Image::create($request->all());
-
-               }
-           }
-
            return redirect('dashboard');
     }
 
@@ -132,15 +109,19 @@ class RoomController extends Controller
             File::delete("cover/".$rooms->cover);
         }
 
-        $images=Image::where("room_id",$rooms->id)->get();
-         foreach($images as $image){
-         if (File::exists("images/".$image->image)) {
-            File::delete("images/".$image->image);
-        }
-         }
-
-
          $rooms->delete();
          return redirect('dashboard');
     }
+
+    public function showReservationForm()
+{
+
+    $roomCost = Room::find(1)->price;
+
+
+    return view('reservation-form', [
+        'roomCost' => $roomCost,
+    ]);
+}
+
 }

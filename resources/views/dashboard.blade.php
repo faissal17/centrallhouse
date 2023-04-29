@@ -1,3 +1,6 @@
+<?php
+
+?>
 <x-app-layout>
 
     <head>
@@ -9,8 +12,10 @@
             <div class="row site-hero-inner justify-content-center align-items-center">
                 <div class="col-md-10 text-center" data-aos="fade">
                     <p class="heading mb-3">Welcome back <span class="username">{{ auth()->user()->name }}</span></p>
-                    <a href="{{ asset('createroom') }}"><button type="button" class="btn btn-outline-warning">Add
-                            Room</button></a>
+                    @if (auth()->user()->isadmin == 1)
+                        <a href="{{ asset('createroom') }}"><button type="button" class="btn btn-outline-warning">Add
+                                Room</button></a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -63,8 +68,10 @@
                                         <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Not
                                             Available</a>
                                     @endif
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4"
-                                        href="/editroom/{{ $room->id }}">Edit Room</a>
+                                    @if (auth()->user()->isadmin == 1)
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4"
+                                            href="/editroom/{{ $room->id }}">Edit Room</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
