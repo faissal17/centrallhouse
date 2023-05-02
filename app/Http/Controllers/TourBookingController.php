@@ -30,7 +30,7 @@ class TourBookingController extends Controller
     public function store(Request $request)
     {
         $tour = Tour::find($request->tours_id);
-        // dd($request->all());
+        // dd(auth()->user()->id);
 
         $toursBooking = [
             'user_id'=>auth()->user()->id,

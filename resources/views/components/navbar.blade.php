@@ -17,19 +17,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('tours') }}">Tours</a>
                 </li>
-                <div class="navbar-item navbar-user dropdown">
+                <div class="navbar-item navbar-user dropdown mt-2">
                     <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center"
                         data-bs-toggle="dropdown">
                         <span>
-                            <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
+                            <span
+                                class="d-none d-md-inline text-dark text-decoration-none">{{ auth()->user()->name }}</span>
                             <b class="caret"></b>
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end me-1">
                         <a href="/user/profile" class="dropdown-item">Edit Profile</a>
-                        <a href="{{ asset('checkout') }}" class="dropdown-item">CheckOut</a>
                         <div class="dropdown-divider"></div>
-                        <a href="{{ route('logout') }}" class="dropdown-item">Log Out</a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Log Out</button>
+                        </form>
                     </div>
                 </div>
             </ul>

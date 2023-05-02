@@ -74,11 +74,6 @@ Route::get('createtable', function(){
 });
 
 
-Route::get('/checkout', function () {
-return view('payment');
-});
-
-
 
 // end of routes that direct me to diffrent pages
 

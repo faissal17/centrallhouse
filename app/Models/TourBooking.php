@@ -11,6 +11,8 @@ class TourBooking extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
+        'tour_id',
         'fullname',
         'email',
         'phone',

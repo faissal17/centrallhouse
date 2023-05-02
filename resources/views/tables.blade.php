@@ -23,42 +23,39 @@
 
     <div class="team-area">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    @foreach ($tables as $table)
-                        <div class="single-team">
-                            <div class="img-area">
-                                <img src="cover/{{ $table->image }}" class="img-responsive" alt="">
-                            </div>
-                            <div class="img-text">
-                                <h1 class="pt-2">{{ $table->name }}</h1>
-                                <h5>{{ $table->price }}$</h5>
-                            </div>
-                            @if ($table->availible)
-                                <h5 class="text-success text-center">Availible</h5>
-                            @else
-                                <h5 class="text-warning text-center">Not Availible</h5>
-                            @endif
-                            <p>{{ $table->description }}</p>
-                            <div
-                                class="d-flex justify-content-center align-items-center pb-3 justify-content-between mx-3">
-                                @if ($table->availible)
-                                    <a href="#modal-table" data-bs-toggle="modal"><button
-                                            class="btn btn-warning">Reserve
-                                            Now</button></a>
-                                @else
-                                    <a href=""><button class="btn btn-warning">
-                                            Not availible</button></a>
-                                @endif
-                                @if (auth()->user()->isadmin == 1)
-                                    <a href="/edittable/{{ $table->id }}"><button
-                                            class="btn btn-light">Edit</button></a>
-                                @endif
-                            </div>
+            {{-- <div class=""> --}}
+            <div class="d-flex flex-wrap justify-content-evenly">
+                @foreach ($tables as $table)
+                    <div class="single-team ms-1">
+                        <div class="img-area">
+                            <img src="cover/{{ $table->image }}" class="img-responsive" alt="">
                         </div>
-                    @endforeach
-                </div>
+                        <div class="img-text">
+                            <h1 class="pt-2">{{ $table->name }}</h1>
+                            <h5>{{ $table->price }}$</h5>
+                        </div>
+                        @if ($table->availible)
+                            <h5 class="text-success text-center">Availible</h5>
+                        @else
+                            <h5 class="text-warning text-center">Not Availible</h5>
+                        @endif
+                        <p>{{ $table->description }}</p>
+                        <div class="d-flex justify-content-center align-items-center pb-3 justify-content-between mx-3">
+                            @if ($table->availible)
+                                <a href="#modal-table" data-bs-toggle="modal"><button class="btn btn-warning">Reserve
+                                        Now</button></a>
+                            @else
+                                <a href=""><button class="btn btn-warning">
+                                        Not availible</button></a>
+                            @endif
+                            @if (auth()->user()->isadmin == 1)
+                                <a href="/edittable/{{ $table->id }}"><button class="btn btn-light">Edit</button></a>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
             </div>
+            {{-- </div> --}}
         </div>
     </div>
 

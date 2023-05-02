@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tour_bookings', function (Blueprint $table) {
             $table->id();
+            $table->integer("user_id");
+            $table->integer("tour_id");
             $table->string('fullname');
             $table->string('email');
             $table->string('phone');

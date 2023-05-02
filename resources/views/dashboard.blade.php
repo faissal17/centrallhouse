@@ -22,10 +22,6 @@
     </section>
     <!-- END section -->
 
-    <!--start of checking avilibility -->
-    <x-check />
-    <!--end of checking avilibility -->
-
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">

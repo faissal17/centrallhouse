@@ -112,16 +112,4 @@ class RoomController extends Controller
          $rooms->delete();
          return redirect('dashboard');
     }
-
-    public function showReservationForm()
-{
-
-    $roomCost = Room::find(1)->price;
-
-
-    return view('reservation-form', [
-        'roomCost' => $roomCost,
-    ]);
-}
-
 }
